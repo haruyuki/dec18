@@ -3,7 +3,7 @@ import type { Pet } from '../types';
 
 export async function loadPetsFromCSV(): Promise<Pet[]> {
   try {
-    const response = await fetch('/src/assets/ChickenSmoothiePetArchive.csv');
+    const response = await fetch('/assets/ChickenSmoothiePetArchive.csv');
     const csvText = await response.text();
     
     const { data } = Papa.parse(csvText, {
